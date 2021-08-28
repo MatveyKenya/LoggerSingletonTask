@@ -15,7 +15,7 @@ public class Main {
 
         logger.log("Создаём и наполняем список");
         List<Integer> list = new ArrayList<>();
-        for (int i=0; i < n; i++){
+        for (int i = 0; i < n; i++) {
             list.add(random.nextInt(m));
         }
 

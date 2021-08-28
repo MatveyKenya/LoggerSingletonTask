@@ -12,10 +12,14 @@ public class Filter {
         Logger logger = Logger.getInstance();
         List<Integer> result = new ArrayList<>();
         for (Integer i : source) {
-            if (i >= threshold){
+            if (i >= threshold) {
                 result.add(i);
+                logger.log("Элемент " + i + " проходит");
+            } else {
+                logger.log("Элемент " + i + " НЕ проходит");
             }
         }
+        logger.log("Прошло " + result.size() + " элемента из " + source.size());
         return result;
     }
 }
