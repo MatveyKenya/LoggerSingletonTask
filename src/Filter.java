@@ -2,16 +2,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Filter {
-    protected int treshold;
+    protected int threshold;
 
-    public Filter(int treshold) {
-        this.treshold = treshold;
+    public Filter(int threshold) {
+        this.threshold = threshold;
     }
 
     public List<Integer> filterOut(List<Integer> source) {
         Logger logger = Logger.getInstance();
         List<Integer> result = new ArrayList<>();
-        //..
+        for (Integer i : source) {
+            if (i >= threshold){
+                result.add(i);
+            }
+        }
         return result;
     }
 }
